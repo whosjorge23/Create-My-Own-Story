@@ -11,7 +11,7 @@ import SwiftUI
 struct Create_My_Own_StoryApp: App {
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            StoryView()
         }
     }
 }

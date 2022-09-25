@@ -1,5 +1,5 @@
 //
-//  ContentView.swift
+//  StoryView.swift
 //  Create My Own Story
 //
 //  Created by Giorgio Giannotta on 24/09/22.
@@ -7,15 +7,19 @@
 
 import SwiftUI
 
-struct ContentView: View {
+//@available(iOS 16.0, *)
+
+struct StoryView: View {
+    
     var body: some View {
-        Text("Hello, world!")
-            .padding()
+        NavigationView {
+            StoryPageView(story: story, pageIndex: 0)
+        }
     }
 }
 
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
-        ContentView()
+        StoryView()
     }
 }
