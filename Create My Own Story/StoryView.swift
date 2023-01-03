@@ -12,8 +12,14 @@ import SwiftUI
 struct StoryView: View {
     
     var body: some View {
-        NavigationView {
-            StoryPageView(story: story, pageIndex: 0)
+        if #available(iOS 16.0, *) {
+            NavigationStack {
+                StoryPageView(story: story, pageIndex: 0)
+            }
+        } else {
+            NavigationView {
+                StoryPageView(story: story, pageIndex: 0)
+            }
         }
     }
 }
